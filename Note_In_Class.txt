@@ -1,0 +1,257 @@
+﻿การขึ้นโปรเจ็กต์ใหม่ด้วย Next.js
+----
+Step 1: เรียกคำสั่งติดตั้ง
+--
+npx create-next-app
+หรือ
+yarn create next-app
+
+กำหนดชื่อโปรเจ็กต์เป็น first-nextjs
+
+Step 2: เข้าไปในโปรเจ็กต์
+--
+cd first-nextjs
+
+Step 3: เปิดเข้า vscode
+--
+code .
+
+Step 4: Run project
+--
+npm run dev
+หรือ
+yarn dev
+
+Step 5: Auto Route
+--
+สร้างไฟล์ help.js ใน pages
+เรียก
+http://localhost:3000/help
+
+Step 6: Dynamic routing
+--
+// http://localhost:3000/post/xxx
+
+step 7: Setup Style component
+--
+npm install --save styled-components
+หรือ
+yarn add styled-components
+
+คืนที่ 2
+---
+การขึ้นโปรเจ็กต์ใหม่ด้วย Next.js
+----
+Step 1: เรียกคำสั่งติดตั้ง
+--
+npx create-next-app nextjs-stylecomponent
+หรือ
+yarn create next-app nextjs-stylecomponent
+
+Step 2: เข้าไปในโปรเจ็กต์
+--
+cd nextjs-stylecomponent
+
+Step 3: เปิดเข้า vscode
+--
+code .
+
+Step 4: ติดตั้ง package "styled-components"
+---
+npm install styled-components
+
+-----------------------------------------------
+การขึ้นโปรเจ็กต์ใหม่ด้วย Next.js
+------------------------------------------------
+Step 1: เรียกคำสั่งติดตั้ง
+
+npx create-next-app nextjs-bootstrap
+
+Step 2: เข้าไปในโปรเจ็กต์
+--
+cd nextjs-bootstrap
+
+Step 3: เปิดเข้า vscode
+--
+code .
+
+Step 4: ติดตั้ง package "bootstrap"
+---
+npm install bootstrap
+
+
+-----------------------------------------------
+การขึ้นโปรเจ็กต์ใหม่ด้วย Next.js
+------------------------------------------------
+Step 1: เรียกคำสั่งติดตั้ง
+
+npx create-next-app nextjs-tailwind
+
+Step 2: เข้าไปในโปรเจ็กต์
+--
+cd nextjs-tailwind
+
+Step 3: เปิดเข้า vscode
+--
+code .
+
+Step 4: ติดตั้ง package "tailwindcss"
+---
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+Step 5: สร้าง  your configuration files
+
+------------------------------------------------
+วันที่ 3
+------------------------------------------------
+โปรเจ็กต์ฝั่งหน้าบ้าน Portfolio
+---
+หน้าบ้าน frontend  (Next.js Framework)
+--
+https://github.com/iamsamitdev/portfolio-frontend
+
+หลังบ้าน backend (Strapi CMS)
+--
+https://github.com/iamsamitdev/portfolio-backend
+
+Step 1: เข้าหลังบ้าน
+---
+cd backend
+
+Step 2: ติดตั้ง node_module
+---
+npm install
+
+Step 3: Run project Strapi
+---
+npm run develop
+
+Step 4: เรียกดูที่หน้าเว็บไซต์
+---
+http://localhost:1337/admin
+
+Step 5: เรียกดูหน้า api
+---
+http://localhost:1337/portfolios
+
+Step 6: สลับมาเข้าหน้าบ้าน
+---
+cd frontend
+
+Step 7: ติดตั้ง node_module
+---
+npm install
+
+Step 8: Run next.js frontend ดู
+---
+npm run dev
+
+Step 9: เรียกดูส่วนหน้าบ้าน
+---
+http://localhost:3000
+
+Step 10: ติดตั้ง Axios
+---
+npm install axios
+
+-----------------------------------------
+Deploy Strapi cms to Heroku
+------------------------------------------
+1. Register heroku account
+--
+https://signup.heroku.com/
+
+2. Validate your email address
+
+3. Heroku CLI setup
+--
+install Heroku CLI
+--
+MacOS
+--
+brew heroku/brew && brew install heroku
+
+Windows
+--
+https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-x86.exe
+https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-x64.exe
+
+note: test check install complete "heroku version"
+
+4. Login to heroku
+--
+heroku login
+
+5. Git init, add, commit
+--
+git init
+git add .
+git commit -am "Initial commit"
+
+6. Heroku create
+--
+heroku create
+
+7. Deploy to Heroku
+--
+git push heroku master
+
+8. heroku open
+--
+heroku open
+
+
+-------------------------------------------------
+Deploy Next.js framework to heroku
+-------------------------------------------------loc
+
+0. Update package.json
+--
+{
+  "name": "nextjs-antd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "antd": "^4.10.2",
+    "axios": "^0.21.1",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sweetalert2": "^10.13.0"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  }
+}
+
+1. Login to heroku
+--
+heroku login
+
+2. Git init, add, commit
+--
+git init
+git add .
+git commit -m "Initial commit"
+
+3. Heroku create
+--
+heroku create
+
+4. Deploy to Heroku
+--
+git push heroku master
+
+5. heroku open
+--
+heroku open
+
+
+heroku logs --tail
